@@ -1,18 +1,9 @@
 .App {
-  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.App-content {
+  flex: 1;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
