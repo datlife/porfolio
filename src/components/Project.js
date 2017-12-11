@@ -1,5 +1,5 @@
 import React from 'react';
-import {Segment, Container, Header} from 'semantic-ui-react';
+import {Segment} from 'semantic-ui-react';
 
 class Project extends React.Component {
   render() {

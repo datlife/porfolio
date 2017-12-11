@@ -6,7 +6,7 @@ class Footer extends React.Component {
     return (
       <Segment>
         <Container textAlign="center">
-           <h4> "Nothing is impossible" </h4>
+           <p><i> "Where is a will,there's a way." </i></p>
         </Container>
       </Segment>
     );

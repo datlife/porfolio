@@ -12,14 +12,13 @@ class Main extends React.Component {
   render() {
     return (
       <div className="App-content">
-
         <Switch>
-          <Route exact path='/' component={HomePage}/>
+          <Route exact path='/'   component={HomePage}/>
           <Route path='/projects' component={ProjectPage}/>
-          <Route path='/blog' component={BlogPage}/>
-          <Route path='/resume' component={ResumePage}/>
-          <Route path='/life' component={LifePage}/>
-          <Route path='/*' component={NotFoundPage}/>
+          <Route path='/blog'     component={BlogPage}/>
+          <Route path='/resume'   component={ResumePage}/>
+          <Route path='/life'     component={LifePage}/>
+          <Route path='/*'        component={NotFoundPage}/>
         </Switch>
       </div>
     );
