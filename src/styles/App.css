@@ -2,8 +2,80 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: #aaaa;
 }
+
 .App-content {
   flex: 1;
 }
 
+/* Navigation Bar */
+.Navbar{
+  padding: 0em 0em 2em 0em;
+  margin: 0;
+}
+.Navbar ul{
+  /*Format Each Nav item*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  list-style: None;
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar li{
+  padding: 1em 1em;
+  background: #eee;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+/* Home Page */
+.Home .Bio{
+  display:grid;
+}
+.Home .Bio .Photo{
+  text-align: center;
+  margin:0;
+  padding:0;
+}
+.Home .Bio .Photo .Brands
+ul
+{
+  list-style: none;  
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: space-evenly;
+  padding:0;
+
+}
+.Home .Bio .Photo .Brands
+a{
+  text-decoration: none;
+}
+.Home .Bio img{
+  width: 100%;
+  padding:0;
+  margin:0;
+}
+
+.Home .Bio .Pitch{
+  font-style:italic;
+}
+
+.Footer{
+  text-align: center;
+  color: #aaa;
+}
+
+@media (min-width: 750px){
+  .Home .Bio{
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap:2em;
+    margin: 0;
+    padding: 0 0 5em 0;
+  }
+
+}

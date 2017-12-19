@@ -1,33 +1,38 @@
 import React from 'react';
-import {Image, Grid, Segment, Item } from 'semantic-ui-react'
+
+let bio = {
+  "img":"https://avatars2.githubusercontent.com/u/13214917?s=460&v=4",
+  "about": "\"Hello, thank you for visting my website. \n\
+      I am currently a Computer Science junior at UC Davis. \
+      My work is currently on solving Computer Vison / Machine Learning problems \
+      through latest research in the field.\"",
+   "github": "https://github.com/datlife",
+   "linkedin": "https://www.linkedin.com/in/tdatnguyen/",
+   "twitter": "https://twitter.com/dat_ai_s"
+}
 
 class HomePage extends React.Component {
   render() {
-    let bio= [
-      {
-      childKey: 0,        
-      image: 'https://avatars1.githubusercontent.com/u/13214917?s=400&u=543af7f7f027c55c57d6d32e2343d5f7a4778cfd&v=4',
-      header: 'Dat T. Nguyen',
-      meta: 'CS Student @ UC Davis',      
-      description: 'Hi there, thanks for visting my website. Pitch!!! ' +
-      'Hi there, thanks for visting my website. Pitch!!! ' +
-      'Hi there, thanks for visting my website. Pitch!!! ' +
-      'Hi there, thanks for visting my website. Pitch!!! ' +
-      'Hi there, thanks for visting my website. Pitch!!! ',
-      extra: 'What should I put here',
-    }]
     return (
       <div className='Home'>
-        <Grid container='true'>
-          <Segment>
-          <Item.Group items={bio} />
-
-          </Segment>
-         
-        </Grid>
-
         <div className='Bio'>
-          This contain my photos and brief bio
+          <div className="Photo">
+            <p> Dat T. Nguyen </p>
+            <img src={bio["img"]} />
+
+            <div className="Brands">
+              <ul>
+                <a href={bio['github']}><li className="fab fa-github     fa-2x"/></a>
+                <a href={bio['linkedin']}><li className="fab fa-linkedin fa-2x"/></a>
+                <a href={bio['twitter']}><li className="fab fa-twitter   fa-2x"/></a>
+              </ul>
+            </div>
+          </div>
+
+          <div className="Pitch">
+            <p>{bio['about']}</p>
+          </div>
+
         </div>
         <div className="News">
           What I am up to
@@ -35,6 +40,7 @@ class HomePage extends React.Component {
         <div className="Live">
           My lastest info 
         </div>
+
       </div>
     );
   }

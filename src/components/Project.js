@@ -1,10 +1,9 @@
 import React from 'react';
-import {Segment} from 'semantic-ui-react';
 
 class Project extends React.Component {
   render() {
     return (
-      <Segment className='Project'>
+      <div className='Project'>
         <div className='Project-Title'>
           Title of the project + photo A link + demo should be included here
         </div>
@@ -16,7 +15,7 @@ class Project extends React.Component {
         <div className='Project-Body'>
           Goes into detail of the body
         </div>
-      </Segment>
+      </div>
     );
   }
 }
