@@ -1,44 +1,59 @@
 import React from 'react';
-
 let bio = {
-  'img':      'https://avatars2.githubusercontent.com/u/13214917?s=460&v=4',
-  'github':   'https://github.com/datlife',
-  'linkedin': 'https://www.linkedin.com/in/tdatnguyen/',
-  'twitter':  'https://twitter.com/dat_ai_',
-  'email':    'tdat.nguyen93@gmail.com',
-  'about':    '"Hello, thank you for visting my website.' +
-              'I am currently a Computer Science junior at UC Davis.' +
-              'My work is currently on solving Computer Vison / Machine Learning problems' +
-              'through latest research in the field. "',
-} 
+  'img': 'avatar.jpg',
+  'about': 'Hi there, thank you very much for visting my website. As you can tell from my profile photo, I am an ENFP although I am pretty isolated for the past few years to focus on school.I am a RISS alum at Carnegie Mellon University. My interest is in applying Machine Learning/Computer Vision skills into challenging problems. ',
+  'sidenote': 'P/S: If you are living in the North Cal and wanna get good Pho? Contact me ;).',
+}
+
+let socials = {
+  'gmail.svg': 'tdat.nguyen93@gmail.com',
+  'github.svg': 'https://github.com/datlife',
+  'linkedin.svg': 'https://www.linkedin.com/in/tdatnguyen/',
+  'twitter.svg': 'https://twitter.com/dat_ai_',
+}
 
 class HomePage extends React.Component {
   render() {
+    console.log("PUBLIC URL: ", process.env.PUBLIC_URL);
     return (
       <div className='Home'>
-        <div className='Bio'>
+
+        {/* About me section */}
+        <section className='Bio'>
           <div className='Photo'>
-            <img src={bio['img']} />
+            <img src={bio['img']} alt='img' />
             <div className='Brands'>
-              <ul>
-                 <li> <a href={bio['github']}><object data='assets/icons/github.svg' type='image/svg+xml' /> </a></li>
-                <a href={bio['linkedin']}><li className='fab fa-linkedin fa-2x'/></a>
-                <a href={bio['twitter']}> <li className='fab fa-twitter  fa-2x'/></a>
+              <ul id='connect'>
+                {Object.keys(socials).map((key, idx) => {
+                  return (<li>
+                    <a href={socials[key]} target='_blank'>
+                      <img src={'icons/' +key} />
+                    </a>
+                  </li>);
+                })
+                }
               </ul>
             </div>
           </div>
-
           <div className='Pitch'>
+            <h3>About me</h3>
             <p>{bio['about']}</p>
+            <p>{bio['sidenote']}</p>
           </div>
-        </div>
-        <div className='News'>
-          What I am up to
-        </div>
+        </section>
 
-        <div className='Live'>
-          Feed news (twitter, facebook, etc.) 
-        </div>
+        {/* My Latest News */}
+        <section id='News'>
+          <h3>Latest news</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquam temporibus iusto sint labore explicabo impedit molestias, nemo perferendis corporis animi, distinctio, natus cum excepturi reprehenderit. Doloribus beatae maxime quisquam!</p>
+        </section>
+
+        {/* My Projects */}
+        <section className="Projects">
+          <h3>Projects</h3>
+        </section>
+              
+
 
       </div>
     );

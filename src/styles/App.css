@@ -1,76 +1,109 @@
-.App {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+/* Core styles */
+body{
+  margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background: #333;
+  color: #ffffff;
   line-height: 1.5;
   text-align: center;
 }
 
-.App-content {
-  flex: 1;
+p {
+ padding: 0em 1.5em;
+}
+
+img{
+  width: 100%;
+  height:auto;
+  padding:0;
+  margin:0;
 }
 
 /* Navigation Bar */
 .Navbar{
+  width: 100%;
   padding: 0em 0em 2em 0em;
   margin: 0;
 }
 .Navbar ul{
+  list-style: None;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
-  list-style: None;
   margin: 0;
   padding: 0;
+  background: #222222;
 }
 
-.Navbar li{
-  padding: 1em 1em;
-  background: #eee;
-  text-align: center;
+.Navbar li, a{
   text-decoration: none;
+  color:#ffffff;
+  padding: 1em 0.5em;
+  text-align: center;
 }
+
 
 /* Home Page */
 .Home .Bio{
   display:grid;
 }
-.Home .Bio .Photo{
-  text-align: center;
-  margin:0;
-  padding:0;
-}
-.Home .Bio .Photo .Brands
-ul
-{
+
+#connect{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
   list-style: none;  
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-content: space-evenly;
-  padding:0;
-
-}
-.Home .Bio .Photo .Brands
-a{
-  text-decoration: none;
-}
-.Home .Bio img{
-  width: 100%;
-  padding:0;
   margin:0;
+  padding:0em 1em;
 }
 
-.Home .Bio .Pitch{
-  font-style:italic;
+#connect a{
+  display:block;
 }
 
+#connect li{
+  margin: 0 auto;
+  width:60%;
+}
+#connect a:link, a:visited {
+  text-decoration: none;
+  background: transparent;
+  opacity: 0.4;
+  border-style: none;
+}
+
+#connect a:hover{
+  opacity: 0.7;
+}
+
+/* Allow SVG icon clickale */
+#connect object{
+  pointer-events: none;
+}
+
+/* Latest News */
+#News{
+  background: #bbbbbb;
+  color: black;
+}
+
+
+/* Footer */
 .Footer{
   text-align: center;
   color: #aaa;
 }
 
 @media (min-width: 750px){
+  body{
+    margin: 0.5em;
+    padding: 0 20em;
+    text-align: left;
+  }
+
+  h3{
+    padding: 0 1.5em;
+  }
   .Home .Bio{
     grid-template-columns: 1fr 3fr;
     grid-column-gap:2em;
