@@ -1,8 +1,8 @@
 import React from 'react';
 let bio = {
   'img': 'avatar.jpg',
-  'about': 'Hi there, thank you very much for visting my website. As you can tell from my profile photo, I am an ENFP although I am pretty isolated for the past few years to focus on school.I am a RISS alum at Carnegie Mellon University. My interest is in applying Machine Learning/Computer Vision skills into challenging problems. ',
-  'sidenote': 'P/S: If you are living in the North Cal and wanna get good Pho? Contact me ;).',
+  'about': 'Hi there, thank you for visting my website. As you can tell from my profile photo, I am an ENFP although I am pretty isolated for the past few years to focus on school. I am a RISS alum at Carnegie Mellon University. My interest is to Machine Learning/Computer Vision skills into challenging problems.',
+  'note': 'P/S: If you are living in the North Cal and wanna get good Pho, feel free to contact me ;).',
 }
 
 let socials = {
@@ -38,7 +38,7 @@ class HomePage extends React.Component {
           <div className='Pitch'>
             <h3>About me</h3>
             <p>{bio['about']}</p>
-            <p>{bio['sidenote']}</p>
+            <p>{bio['note']}</p>
           </div>
         </section>
 
