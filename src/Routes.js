@@ -1,11 +1,11 @@
 import React from 'react';
 
-import HomePage from './layouts/HomePage';
-import ResumePage from './layouts/ResumePage';
-import BlogPage from './layouts/BlogPage';
-import ProjectPage from './layouts/ProjectPage';
-import LifePage from './layouts/LifePage';
-import NotFoundPage from './layouts/NotFound';
+import HomePage        from './layouts/HomePage';
+import ResumePage      from './layouts/ResumePage';
+import BlogPage        from './layouts/BlogPage';
+import ProjectPage     from './layouts/ProjectPage';
+import LifePage        from './layouts/LifePage';
+import NotFoundPage    from './layouts/NotFound';
 import {Switch, Route} from 'react-router-dom';
 
 class Main extends React.Component {
