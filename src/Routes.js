@@ -11,7 +11,7 @@ import {Switch, Route} from 'react-router-dom';
 class Main extends React.Component {
   render() {
     return (
-      <div className="App-content">
+      <div className="main">
         <Switch>
           <Route exact path='/'   component={HomePage}/>
           <Route path='/projects' component={ProjectPage}/>

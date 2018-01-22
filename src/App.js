@@ -1,6 +1,6 @@
 import React   from 'react';
 import Main    from './Routes';
-import MenuBar from './components/MenuBar';
+import Header from './components/Header';
 import Footer  from './components/Footer';
 
 // for History
@@ -9,8 +9,8 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-          <MenuBar/>
+        <div className="App container">
+          <Header/>
           <Main/>
           <Footer/>
         </div>
