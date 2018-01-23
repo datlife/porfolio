@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 // @TODO: add redux
 let bio = {
   'img': 'avatar.jpg',
-  'about': ['Hi there, thank you for visiting my website. I am an undergraduate researcher at UC Davis in Computer Vision / Machine Learning, expected to graduate in May 2019. I was a ',
-    <a href='https://riss.ri.cmu.edu' target='_blank'>Robotics Scholar</a>,
+  'about': ['Hi there, thank you for visiting my website. I am a rising junior and an undergraduate researcher at UC Davis in Computer Vision / Machine Learning. I was a ',
+    <a href='https://riss.ri.cmu.edu' target='_blank' rel="noopener noreferrer" >Robotics Scholar</a>,
     ' at Carnegie Mellon University in Deep Learning for Smart City, and a ',
-    <a href='http://emcor-reu.ncat.edu/' target='_blank'>NSF Scholarship Recipient</a>,
-    '. My current interest is in machine learning, however, I am open to new opportunities related to Computer Science.'],
+    <a href='http://emcor-reu.ncat.edu/' target='_blank' rel="noopener noreferrer" >NSF Scholarship Recipient</a>,
+    '. My current interest is in machine learning and I am open to new opportunities related to interesting CS problems (e.g. Large-scale Parallel Computing, Applied ML for social good).'],
 }
 
 let socials = {
@@ -18,10 +18,10 @@ let socials = {
 }
 
 let latest_news = {
-  '01/15/2017': 'Testing...',
-  '01/01/2017': 'YOLOv2 is completed',
-  '09/26/2017': 'Stated a new school year at UC Davis!',
-  '08/01/2017': 'Back to the Bay Are after the Summer Program',
+  '01/10/2018': 'Still searching for Summer Software Engineering Internship...',
+  '09/26/2017': ['Start working with professor ',
+  <a href='http://web.cs.ucdavis.edu/~yjlee/'>Yong J. Lee</a>, ' on Generative Adversarial Network (thank you!).'],
+  '08/01/2017': 'Back to the Bay Area after the Summer Program at CMU',
 }
 
 let posts = {
@@ -30,10 +30,10 @@ let posts = {
       id: '1',
       author: 'Dat Nguyen',
       title: 'Hello World!',
-      date: '25/01/2018',
+      date: 'Dec 25, 2017',
       photo: 'hello-world.jpg',
 
-      summary: "This is my first blog post",
+      summary: "This website is a Serverless, React, Progressive Web App.",
       body: {},
       claps: 20,
       meh: 0,
@@ -42,10 +42,10 @@ let posts = {
       id: '2',
       author: 'Dat Nguyen',
       title: 'Dataset pipeline for deep learning',
-      date: '01/15/2018',
+      date: 'Jan 10, 2018',
       photo: 'pipeline.gif',
 
-      summary: "How to utilize tf.Dataset to create low-latency data loader for training",
+      summary: "How to utilize tf.Dataset to create a low-latency data loader for training deep learning model",
       body: {},
       claps: 5,
       meh: 1,
@@ -55,8 +55,8 @@ let posts = {
       id: '3',
       author: 'Dat Nguyen',
       title: '[YOLOv2 - Explained] Part 1: How anchors work',
-      date: '01/15/2018',
-      photo: 'hello-world.jpg',
+      date: 'Jan 15, 2018',
+      photo: 'yolov2.png',
 
       summary: "This is the first post of a series explaining how YOLOv2 works",
       body: {
@@ -69,6 +69,25 @@ let posts = {
 }
 
 class HomePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      github_data: null,
+      isLoaded: false,
+    }
+  }
+  componentDidMount() {
+    this.setState({ isLoaded: true });
+
+    fetch('https://github.com/users/datlife/contributions')
+      .then(response => {
+        if (response.ok) return response.text()
+      })
+      .then(data => { this.setState({ github_data: data }) })
+      .catch(error => console.error('Error:', error))
+  }
+
+
   render() {
     return (
       <div className='Home'>
@@ -85,7 +104,7 @@ class HomePage extends React.Component {
                 {Object.keys(socials).map((key, idx) => {
                   return (
                     <li id={idx}>
-                      <a href={socials[key]} target='_blank'>
+                      <a href={socials[key]} target='_blank' rel="noopener noreferrer" >
                         <img src={key} />
                       </a>
                     </li>);
@@ -112,29 +131,34 @@ class HomePage extends React.Component {
           <h2 className="bd-title">Blog</h2>
           {
             posts.allIds.length ?
-            posts.allIds.map((id) => {
-              let blog_entry = posts.byId[id];
-              console.log(blog_entry)
-              return (
-                <div className="card mb-3" id={id}>
+              posts.allIds
+              .sort((a, b)=> a < b)
+              .map((id) => {
+                let blog_entry = posts.byId[id];
+                return (
+                  <div className="card mb-3" id={id}>
                     <div className="card-body">
-                      <h5 className="card-title">{blog_entry.title}</h5>
+                      <h4 className="card-title">{blog_entry.title}</h4>
                       <p className="card-text">{blog_entry.summary}</p>
-                      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                     </div>
-                </div>
-              );
-            }): null
+                  </div>
+                );
+              }) : null
           }
           <p><NavLink className='nav-link' to='/blog'>More...</NavLink></p>
         </section>
 
-              <section className="projects">
-                <h2 className="bd-title">Side Projects</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nihil sequi cum ratione, illum enim facere natus assumenda sed magni possimus nostrum repudiandae ipsam delectus esse veritatis quia dicta est animi deleniti rem quaerat magnam voluptate. Veritatis eos illo culpa!</p>
-              </section>
-        {/* My Latest Projects */ }
+        <section className="projects">
+          <h2 className="bd-title">Side Projects</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint praesentium commodi reiciendis aspernatur, suscipit provident animi vel laborum! Accusamus.</p>
+        </section>
 
+        <section className="Github">
+          <h3 className="bd-title">Open-source Contributions</h3>
+          <a href='https://github.com/datlife'>
+          <div classname="contributions" dangerouslySetInnerHTML={{ __html: this.state.github_data }} />
+          </a>
+        </section>
       </div>
     );
   }

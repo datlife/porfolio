@@ -6,8 +6,6 @@ p {
   font-family: "Lora", serif;
 }
 
-
-
 /*For stick footer*/
 html {
   height: 100%;
@@ -18,9 +16,19 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
 body {
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
+}
+
+/*Card Hover effects ( for blog, projects*/
+// .card{
+//   line-height: 1em;
+// }
+.card:hover{
+  box-shadow: 0.25em 0.25em 0.5em #aaaaaa;
+  cursor: pointer;
 }

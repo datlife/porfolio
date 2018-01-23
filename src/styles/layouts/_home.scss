@@ -5,7 +5,7 @@
 section{
   margin-bottom: 1.5em;
 }
-section h2{
+section .bd-title{
   padding-bottom: 0.25em;
   border-bottom:1px solid #e8e8e8;
 }
@@ -21,6 +21,18 @@ section h2{
 .Home .introduction .about{
   padding: 1em 0;
 }
+
+/*Blog */
+.card p{
+  padding: 0;
+  margin: 0;
+}
+
+/*Only available on Desktop */
+.Home .Github{
+  visibility: hidden;
+}
+
 
 /* Social Icons */
 /*Positioning */
@@ -58,6 +70,7 @@ section h2{
 }
 
 
+
 // Desktop UI
 @media (min-width: 750px){
   .Home .introduction {
@@ -77,5 +90,15 @@ section h2{
   #social-icons li{
     margin: 0;
     width:60%;
+  }
+
+  .Home .Github{
+    padding-top: 2em;
+    visibility: visible;
+  }  
+  .Home .Github svg {
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
   }
 }
