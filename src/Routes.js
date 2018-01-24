@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Login           from './components/Login';
 import HomePage        from './layouts/HomePage';
 import ResumePage      from './layouts/ResumePage';
 import BlogPage        from './layouts/BlogPage';
@@ -18,6 +18,7 @@ class Main extends React.Component {
           <Route path='/blog'     component={BlogPage}/>
           <Route path='/resume'   component={ResumePage}/>
           <Route path='/life'     component={LifePage}/>
+          <Route path='/login'    component={Login} />
           <Route path='/*'        component={NotFoundPage}/>
         </Switch>
       </div>

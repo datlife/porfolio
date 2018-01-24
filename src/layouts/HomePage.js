@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 // @TODO: add redux
 let bio = {
   'img': 'avatar.jpg',
@@ -16,14 +17,12 @@ let socials = {
   'icons/linkedin.svg': 'https://www.linkedin.com/in/tdatnguyen/',
   'icons/twitter.svg': 'https://twitter.com/dat_ai_',
 }
-
 let latest_news = {
   '01/10/2018': 'Still searching for Summer Software Engineering Internship...',
   '09/26/2017': ['Start working with professor ',
-  <a href='http://web.cs.ucdavis.edu/~yjlee/'>Yong J. Lee</a>, ' on Generative Adversarial Network (thank you!).'],
+    <a href='http://web.cs.ucdavis.edu/~yjlee/'>Yong J. Lee</a>, ' on Generative Adversarial Network (thank you!).'],
   '08/01/2017': 'Back to the Bay Area after the Summer Program at CMU',
 }
-
 let posts = {
   byId: {
     '1': {
@@ -32,7 +31,6 @@ let posts = {
       title: 'Hello World!',
       date: 'Dec 25, 2017',
       photo: 'hello-world.jpg',
-
       summary: "This website is a Serverless, React, Progressive Web App.",
       body: {},
       claps: 20,
@@ -78,7 +76,6 @@ class HomePage extends React.Component {
   }
   componentDidMount() {
     this.setState({ isLoaded: true });
-
     fetch('https://github.com/users/datlife/contributions')
       .then(response => {
         if (response.ok) return response.text()
@@ -86,7 +83,6 @@ class HomePage extends React.Component {
       .then(data => { this.setState({ github_data: data }) })
       .catch(error => console.error('Error:', error))
   }
-
 
   render() {
     return (
@@ -97,8 +93,7 @@ class HomePage extends React.Component {
           </div>
           <div className="about">
             <h3>Dat Nguyen</h3>
-            <p>{bio['about']}</p>
-
+            <p><i>{bio['about']}</i></p>
             <div className='socials'>
               <ul id='social-icons'>
                 {Object.keys(socials).map((key, idx) => {
@@ -113,6 +108,7 @@ class HomePage extends React.Component {
             </div>
           </div>
         </section>
+        {/* My Latest News */}
 
         <section className="latest-news">
           <h2 className="bd-title">Latest News</h2>
@@ -125,25 +121,25 @@ class HomePage extends React.Component {
             })}
           </ul>
         </section>
-        {/* My Latest News */}
-
+        {/* Blog section */}
         <section className="blog">
           <h2 className="bd-title">Blog</h2>
           {
             posts.allIds.length ?
               posts.allIds
-              .sort((a, b)=> a < b)
-              .map((id) => {
-                let blog_entry = posts.byId[id];
-                return (
-                  <div className="card mb-3" id={id}>
-                    <div className="card-body">
-                      <h4 className="card-title">{blog_entry.title}</h4>
-                      <p className="card-text">{blog_entry.summary}</p>
+                .sort((a, b) => a < b)
+                .map((id) => {
+                  let blog_entry = posts.byId[id];
+                  return (
+                    <div className="card mb-3" id={id}>
+                      <div className="card-body">
+                        <h4 className="card-title">{blog_entry.title}</h4>
+                        <p className="card-text">{blog_entry.summary}</p>
+                      </div>
                     </div>
-                  </div>
-                );
-              }) : null
+                  );
+              }) 
+            : null
           }
           <p><NavLink className='nav-link' to='/blog'>More...</NavLink></p>
         </section>
@@ -156,7 +152,7 @@ class HomePage extends React.Component {
         <section className="Github">
           <h3 className="bd-title">Open-source Contributions</h3>
           <a href='https://github.com/datlife'>
-          <div classname="contributions" dangerouslySetInnerHTML={{ __html: this.state.github_data }} />
+            <div classname="contributions" dangerouslySetInnerHTML={{ __html: this.state.github_data }} />
           </a>
         </section>
       </div>
