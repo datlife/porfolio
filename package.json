@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "draft-js": "^0.10.5",
     "font-awesome": "^4.7.0",
     "install": "^0.10.2",
     "node-sass-chokidar": "0.0.3",
