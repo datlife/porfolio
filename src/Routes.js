@@ -1,12 +1,13 @@
 import React from 'react';
-import Login           from './components/Login';
 import HomePage        from './layouts/HomePage';
-import ResumePage      from './layouts/ResumePage';
 import BlogPage        from './layouts/BlogPage';
 import ProjectPage     from './layouts/ProjectPage';
 import LifePage        from './layouts/LifePage';
 import NotFoundPage    from './layouts/NotFound';
-import {Switch, Route} from 'react-router-dom';
+
+import BlogEntry from './components/BlogEntry';
+
+import {Switch, Route, Router} from 'react-router-dom';
 
 class Main extends React.Component {
   render() {
@@ -14,14 +15,13 @@ class Main extends React.Component {
       <div className="main">
         <Switch>
           <Route exact path='/'   component={HomePage}/>
-          <Route path='/projects' component={ProjectPage}/>
           <Route path='/blog'     component={BlogPage}/>
-          <Route path='/resume'   component={ResumePage}/>
-          <Route path='/life'     component={LifePage}/>
-          <Route path='/login'    component={Login} />
+          <Route path='/posts/:id' component={BlogEntry}/>
+          <Route path='/projects' component={ProjectPage}/>
+          <Route path='/life'     cosmponent={LifePage}/>
           <Route path='/*'        component={NotFoundPage}/>
         </Switch>
-      </div>
+      </div> 
     );
   }
 }
