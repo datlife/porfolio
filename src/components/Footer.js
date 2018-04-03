@@ -1,9 +1,5 @@
 import React from 'react';
 
-let bio = {
-  'img': 'avatar.jpg',
-}
-
 class Footer extends React.Component {
   render() {
     return (
