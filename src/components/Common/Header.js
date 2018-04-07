@@ -17,7 +17,7 @@ class Header extends React.Component {
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="navbar-header">
             <NavLink className='navbar-brand' to='/'>
-            <strong>Dat Life</strong></NavLink>
+            <strong>DatCode</strong></NavLink>
           </div>
           <button className="navbar-toggler navbar-toggler-right"
             type="button"

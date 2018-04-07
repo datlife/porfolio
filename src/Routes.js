@@ -5,8 +5,7 @@ import ProjectPage     from './layouts/ProjectPage';
 import LifePage        from './layouts/LifePage';
 import NotFoundPage    from './layouts/NotFound';
 
-import BlogEntry from './components/BlogEntry';
-
+import Article from './components/Article/Article';
 import {Switch, Route, Router} from 'react-router-dom';
 
 class Main extends React.Component {
@@ -16,7 +15,7 @@ class Main extends React.Component {
         <Switch>
           <Route exact path='/'   component={HomePage}/>
           <Route path='/blog'     component={BlogPage}/>
-          <Route path='/posts/:id' component={BlogEntry}/>
+          <Route path='/posts/:id' component={Article}/>
           <Route path='/projects' component={ProjectPage}/>
           <Route path='/life'     cosmponent={LifePage}/>
           <Route path='/*'        component={NotFoundPage}/>

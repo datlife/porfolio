@@ -2,9 +2,11 @@
   "name": "datnguyen.me",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://datlife.github.io",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^1.1.0",
     "install": "^0.10.2",
     "node-sass-chokidar": "0.0.3",
     "npm": "^5.6.0",
@@ -23,6 +25,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

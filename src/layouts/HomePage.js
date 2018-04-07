@@ -2,26 +2,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {posts} from './Data';
-import BlogEntryReview from '../components/BlogEntryReview';
+import ArticlePreview from '../components/Article/Preview';
 
 
 class HomePage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      github_data: null,
-      isLoaded: false,
-    }
-  }
-  componentDidMount() {
-    this.setState({ isLoaded: true });
-    fetch(bio['contribution'])
-      .then(response => {
-        if (response.ok) return response.text()
-      })
-      .then(data => { this.setState({ github_data: data }) })
-      .catch(error => console.error('Error:', error))
-  }
+
   render() {
     return (
       <div className='Home'>
@@ -30,7 +15,8 @@ class HomePage extends React.Component {
             <img src={bio['img']} alt='img' className='img-thumbnail rounded-circle' />
           </div>
           <div className="about">
-            <h3>Dat Nguyen</h3>
+          <h1  id="my-name"> Dat Nguyen </h1>
+          <small className="text-muted">Computer Science student @ UC Davis</small>
             <p><i>{bio['about']}</i></p>
             <div className='socials'>
               <ul id='social-icons'>
@@ -69,7 +55,7 @@ class HomePage extends React.Component {
                 .sort((a, b) => a < b)
                 .map((id) => {
                   let blog_entry = posts.byId[id];
-                  return <BlogEntryReview post_summary={blog_entry} minimal={true} />
+                  return <ArticlePreview post_summary={blog_entry} minimal={true} />
               }) 
             : null
           }
@@ -80,13 +66,6 @@ class HomePage extends React.Component {
         <section className="projects">
           <h2 className="bd-title">Side Projects</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint praesentium commodi reiciendis aspernatur, suscipit provident animi vel laborum! Accusamus.</p>
-        </section>
-
-        <section className="Github">
-          <h3 className="bd-title">Open-source Contributions</h3>
-          <a href='https://github.com/datlife'>
-            <div className="contributions" dangerouslySetInnerHTML={{ __html: this.state.github_data }} />
-          </a>
         </section>
       </div>
     );

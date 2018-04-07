@@ -20,14 +20,18 @@ section .bd-title{
   grid-gap: 0.75em;
 }
 
-.Home .introduction .about h3{
+.Home .introduction .about h1{
   text-align: left;
-  font-size: 2em;
 }
 .Home .introduction .about{
   padding: 1em 0;
 }
-
+#my-name{
+  font-family: "Playfair Display";
+  font-weight: bolder;
+	font-style: normal;
+	font-variant: normal;
+}
 /*Blog */
 .Home .blog .summary a{
   color:inherit;

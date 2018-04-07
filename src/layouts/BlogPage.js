@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogEntryReview from '../components/BlogEntryReview';
+import ArticlePreview from '../components/Article/Preview';
 import {posts} from './Data';
 
 class BlogPage extends React.Component {
@@ -13,7 +13,7 @@ class BlogPage extends React.Component {
             .sort((a, b)=> a < b)
             .map((id) => {
               let summary = posts.byId[id];
-              return <BlogEntryReview post_summary={summary} minimal={false} />
+              return <ArticlePreview post_summary={summary} minimal={false} />
             }) : null
         }
       </div>

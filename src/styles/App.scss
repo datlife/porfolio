@@ -2,8 +2,9 @@
 @import 'styles/components/_header.scss';
 @import 'styles/layouts/_home.scss';
 @import 'styles/layouts/_blog_page.scss';
+
 p {
-  font-family: "Lora", serif;
+  font-family: "Lora",  serif;
 }
 
 /*For stick footer*/
@@ -26,7 +27,7 @@ body {
 }
 
 /*Card Hover effects ( for blog, projects*/
-.card{
+.card:hover{
   box-shadow: 0.1em 0.1em 0.3em #aaaaaa;
   cursor: pointer;
 }

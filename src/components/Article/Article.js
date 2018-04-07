@@ -1,11 +1,11 @@
 import React from 'react';
 
-class BlogEntry extends React.Component {
+class Article extends React.Component {
   render() {
     // Request full blog using ID
     return (
-      <div className='Entry'>
-        <div className='Entry-Title'>
+      <div className='Article'>
+        <div className='Headline'>
           hello Wolrd
         </div>
       </div>
@@ -13,4 +13,4 @@ class BlogEntry extends React.Component {
   }
 }
 
-export default BlogEntry;
+export default Article;

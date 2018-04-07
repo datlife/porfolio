@@ -1,5 +1,5 @@
 import React from 'react';
-import LifeEvent from '../components/LifeEvent';
+import LifeEvent from '../components/Gallery/LifeEvent';
 
 class LifePage extends React.Component {
   render() {

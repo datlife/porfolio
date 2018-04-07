@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from '../components/Project';
+import Project from '../components/Showcase/Project';
 
 class ProjectPage extends React.Component {
   render() {
