@@ -5,8 +5,8 @@ import ProjectPage     from './layouts/ProjectPage';
 import LifePage        from './layouts/LifePage';
 import NotFoundPage    from './layouts/NotFound';
 
-import Article from './components/Article/Article';
-import {Switch, Route, Router} from 'react-router-dom';
+import Article from './components/article/Article';
+import {Switch, Route} from 'react-router-dom';
 
 class Main extends React.Component {
   render() {
