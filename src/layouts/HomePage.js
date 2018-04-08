@@ -2,7 +2,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {posts} from './Data';
-import ArticlePreview from '../components/Article/Preview';
+import ArticlePreview from '../components/article/Preview';
 
 let bio = {
   'img': 'avatar.jpg',

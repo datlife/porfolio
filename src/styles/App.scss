@@ -1,7 +1,9 @@
-// @import 'styles/components/_footer.scss';
-// @import 'styles/components/_header.scss';
+@import 'styles/components/_footer.scss';
+@import 'styles/components/_header.scss';
+@import 'styles/components/_article_preview.scss';
+
 @import 'styles/layouts/_home.scss';
-// @import 'styles/layouts/_blog_page.scss';
+@import 'styles/layouts/_blog_page.scss';
 
 p {
   font-family: "Lora",  serif;
@@ -24,10 +26,4 @@ body {
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: "Lora", serif;
-}
-
-/*Card Hover effects ( for blog, projects*/
-.card:hover{
-  box-shadow: 0.1em 0.1em 0.3em #aaaaaa;
-  cursor: pointer;
 }

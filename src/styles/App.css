@@ -1,3 +1,45 @@
+.footer {
+  position: absolute;
+  border-top: 1px solid #e8e8e8;
+  text-align: center;
+  padding-top: 0.5em;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.Header {
+  padding: 1em 0;
+  margin: 0; }
+
+.navbar {
+  padding: 0;
+  margin: 0; }
+
+.Header a {
+  color: #333333;
+  text-decoration: none; }
+
+.navbar-brand {
+  font: bolder; }
+
+/*Menu bar*/
+#menu li a {
+  text-decoration: none;
+  padding: 1em 0.5em; }
+
+/*Blog */
+.summary a {
+  color: inherit; }
+
+.card p {
+  padding: 0;
+  margin: 0; }
+
+/*Card Hover effects ( for blog, projects*/
+.card:hover {
+  background: #eee;
+  cursor: pointer; }
+
 .Home {
   margin-top: 3em; }
 
@@ -28,14 +70,6 @@ section .bd-title {
   font-weight: bolder;
   font-style: normal;
   font-variant: normal; }
-
-/*Blog */
-.Home .blog .summary a {
-  color: inherit; }
-
-.card p {
-  padding: 0;
-  margin: 0; }
 
 /*Only available on Desktop */
 .Home .Github {
@@ -120,8 +154,3 @@ body {
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: "Lora", serif; }
-
-/*Card Hover effects ( for blog, projects*/
-.card:hover {
-  box-shadow: 0.1em 0.1em 0.3em #aaaaaa;
-  cursor: pointer; }

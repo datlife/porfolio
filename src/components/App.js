@@ -1,7 +1,7 @@
 import React   from 'react';
-import Main    from './Routes';
-import Header from './components/common/Header';
-import Footer  from './components/common/Footer';
+import Main    from '../Routes';
+import Header from './common/Header';
+import Footer  from './common/Footer';
 
 // for History
 import {BrowserRouter} from 'react-router-dom';
