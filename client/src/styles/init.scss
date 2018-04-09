@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@import "variables";
+@import "mixins";
+@import "base";
+@import "pages";
+
+p {
+  font-family: "Lora",  serif;
+}
+
+/*For stick footer*/
+html {
+  height: 100%;
+  // box-sizing: border-box;
+}
+// *,
+// *:before,
+// *:after {
+//   box-sizing: inherit;
+// }
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Lora", serif;
+  background: #fbfafc;
+}

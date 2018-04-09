@@ -1,0 +1,22 @@
+.Header{
+  padding: 1em 0;
+  margin: 0;
+}
+.navbar{
+  padding: 0;
+  margin: 0;
+}
+
+.Header a{
+  color: #333333;
+  text-decoration: none;
+}
+
+.navbar-brand{
+  font: bolder;
+}
+/*Menu bar*/
+#menu li a{
+  text-decoration: none;
+  padding: 1em 0.5em;
+}

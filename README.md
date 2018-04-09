@@ -1,47 +1,20 @@
-# A Simple Porfolio Website
-Using `create-react-app`
+## Dat's porfolio website
+This website is built with the following goals in mind:
 
-## Documentation
-* React
-* Create-react-app
-* Redux
-* Integrate Disqus
-* SEO keywords
+* Taking advantages of latest web dev stack. (`create-react-app`, `graphql`)
+* Minimize amount of dependencies. That means I can deploy this app anywhere.
+* Flexible and scalable as much as possible.
+* Using CRUD model, rather than static single-page.
 
-## Directory Layout
-```shell
-./src
-├── App.js
-├── constants.js
-├── index.js
-├── registerServiceWorker.js
-├── Routes.js
-├── api
-│   └── schema.js
-├── components
-│   ├── BlogEntry.js
-│   ├── Footer.js
-│   ├── Header.js
-│   ├── LifeEvent.js
-│   ├── Login.js
-│   └── Project.js
-├── layouts
-│   ├── BlogPage.js
-│   ├── Data.js
-│   ├── HomePage.js
-│   ├── LifePage.js
-│   ├── NotFound.js
-│   ├── ProjectPage.js
-│   └── ResumePage.js
-├── redux
-│   └── actions.js
-└── styles
-    ├── App.css
-    ├── App.scss
-    ├── components
-    │   ├── _footer.scss
-    │   └── _header.scss
-    └── layouts
-        └── _home.scss
 
+### References
+
+Client
+```
+https://www.apollographql.com/docs/react/essentials/get-started.html
+```
+
+Server 
+```
+to be updated
 ```
