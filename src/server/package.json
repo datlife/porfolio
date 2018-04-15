@@ -1,0 +1,15 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "markdown server using graphql",
+  "main": "server.js",
+  "dependencies": {
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Dat Nguyen",
+  "license": "ISC"
+}
