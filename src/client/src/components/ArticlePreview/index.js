@@ -20,7 +20,6 @@ class ArticlePreview extends  React.Component{
         <h5 className="card-title"><strong>{post_summary.title}</strong></h5>
         <p className="card-text">{post_summary.summary}</p>
         <br />
-
         {minimal ? null: 
           <p className="card-text">
                 <small className="text-muted">Posed by <i>Dat Nguyen </i> on {post_summary.date}</small>
