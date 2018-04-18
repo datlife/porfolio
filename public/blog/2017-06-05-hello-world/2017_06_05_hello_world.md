@@ -1,9 +1,7 @@
 ---
-id: 1
 title: Hello World
 author: Anonymous
-date: Dec 25, 2017
-tag: []
+cover_photo: hello-world.jpg
 ---
 
 # Hello Wolrd

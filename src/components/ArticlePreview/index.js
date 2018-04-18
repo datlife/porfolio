@@ -11,7 +11,6 @@ class ArticlePreview extends  React.Component{
       <img className="card-img-top" 
            src={post_summary.photo} 
            alt="Card" />
-           
       <Link to={{
         pathname: `/posts/${post_summary.id}`, 
         state:{post_id: post_summary.id}}} 

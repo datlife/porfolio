@@ -1,10 +1,47 @@
-## Dat's porfolio website
-This website is built with the following goals in mind:
+# A Simple Porfolio Website
+Using `create-react-app`
 
-* Taking advantages of latest web dev stack. (`create-react-app`, `graphql`)
-* Minimize amount of dependencies.
-* Flexible and scalable as much as possible.
-* CRUD model, ability to easily modify content.
+## Documentation
+* React
+* Create-react-app
+* Redux
+* Integrate Disqus
+* SEO keywords
 
+## Directory Layout
+```shell
+./src
+├── App.js
+├── constants.js
+├── index.js
+├── registerServiceWorker.js
+├── Routes.js
+├── api
+│   └── schema.js
+├── components
+│   ├── BlogEntry.js
+│   ├── Footer.js
+│   ├── Header.js
+│   ├── LifeEvent.js
+│   ├── Login.js
+│   └── Project.js
+├── layouts
+│   ├── BlogPage.js
+│   ├── Data.js
+│   ├── HomePage.js
+│   ├── LifePage.js
+│   ├── NotFound.js
+│   ├── ProjectPage.js
+│   └── ResumePage.js
+├── redux
+│   └── actions.js
+└── styles
+    ├── App.css
+    ├── App.scss
+    ├── components
+    │   ├── _footer.scss
+    │   └── _header.scss
+    └── layouts
+        └── _home.scss
 
-### References
+```
