@@ -12,10 +12,7 @@ class Article extends React.Component {
            src={article.photo} 
            alt="Not found!" />
         <h1 className="Headline">{article.title}</h1>
-
         <p> {article.summary} </p>
-
-
       </div>
     );
   }
